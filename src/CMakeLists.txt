@@ -21,6 +21,7 @@ add_library(raff
 )
 
 target_include_directories(raff PRIVATE ${deps}clog/src/include)
+target_include_directories(raff PRIVATE ${deps}tiny-libc/src/include)
 target_include_directories(raff PUBLIC include)
 
 target_compile_options(raff PRIVATE -Wall -Wno-unused-variable)
