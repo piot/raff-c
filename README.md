@@ -12,6 +12,7 @@ Chunk file format inspired by [FourCC](https://en.wikipedia.org/wiki/FourCC), an
 | :------------ | -----: | :------------------------------------------------------------------------ |
 | [Icon](#icon) |      4 | 0xF0, 0x9F, 0xA6, 0x8A [[1]](https://www.compart.com/en/unicode/U+1F98A). |
 | FourCC        |      4 | 0x52, 0x41, 0x46, 0x46 (the string "`RAFF`")                              |
+| LF            |      1 | 0x0a (LF)                                                                 |
 
 
 ## Chunk Header
