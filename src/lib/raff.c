@@ -103,14 +103,14 @@ int raffReadAndVerifyHeader(const uint8_t* data, size_t count)
     return 9;
 }
 
-const char* raffTagToString(char* target, size_t count, RaffTag self)
+static const char* raffTagToString(char* target, size_t count, RaffTag self)
 {
     snprintf(target, count, "'%c%c%c%c' (0x%02X,0x%02X,0x%02X,0x%02X)", self[0], self[1], self[2], self[3], self[0],
              self[1], self[2], self[3]);
     return target;
 }
 
-const char* raffTagToRawString(char* target, size_t count, RaffTag self)
+static const char* raffTagToRawString(char* target, size_t count, RaffTag self)
 {
     snprintf(target, count, "%c%c%c%c", self[0], self[1], self[2], self[3]);
 

@@ -15,4 +15,7 @@ int raffReadChunkHeader(const uint8_t* data, size_t count, RaffTag icon, RaffTag
 
 int raffReadAndVerifyHeader(const uint8_t* data, size_t count);
 int raffReadMarker(const uint8_t* data, size_t count, RaffTag tag);
+
+
+
 #endif

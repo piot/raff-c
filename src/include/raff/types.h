@@ -10,4 +10,6 @@
 
 typedef uint8_t RaffTag[4];
 
+int raffTagEqual(RaffTag icon, RaffTag expectedIcon);
+
 #endif
