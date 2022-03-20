@@ -2,6 +2,7 @@
 
 [![Actions Status](https://github.com/piot/raff-c/workflows/build%20linux/badge.svg)](https://github.com/piot/raff-c/actions)
 [![Actions Status](https://github.com/piot/raff-c/workflows/build%20mac%20os/badge.svg)](https://github.com/piot/raff-c/actions)
+[![Actions Status](https://github.com/piot/raff-c/workflows/build%20Windows/badge.svg)](https://github.com/piot/raff-c/actions)
 
 Chunk file format inspired by [FourCC](https://en.wikipedia.org/wiki/FourCC), and its respective file formats such as [IFF](https://en.wikipedia.org/wiki/Interchange_File_Format).
 
