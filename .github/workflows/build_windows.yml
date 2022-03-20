@@ -1,19 +1,14 @@
-name: build mac os
+name: build Windows
 on: [push]
 jobs:
   build:
-    name: Build MacOS
-    runs-on: macos-10.15
+    name: Build Windows
+    runs-on: windows-2022
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup cmake
-        uses: jwlawson/actions-setup-cmake@v1.11
-        with:
-          cmake-version: "3.22.x"
-
-      - name: Install Go
+      - name: install Go
         uses: actions/setup-go@v2
         with:
           go-version: 1.18
@@ -23,16 +18,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.DEPS_PAT}}
 
-      - name: create cmake cache
-        run: cmake -DCMAKE_BUILD_TYPE=Debug .
+      - name: create cmake cache with Visual Studio 2022
+        run: cmake  -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE="Debug" .
         working-directory: src/
 
-      - name: build
+      - name: cmake build
         run: cmake --build . --clean-first
         working-directory: src/
 
       - uses: actions/upload-artifact@v2
         with:
-          name: Raff MacOS Library
+          name: Raff Windows Library
           path: |
-            src/libraff.a
+            src/raff.lib
