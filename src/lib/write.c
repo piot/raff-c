@@ -29,8 +29,8 @@ int raffWriteHeader(uint8_t* data, size_t maxCount)
         return -2;
     }
 
-    RaffTag expectedIcon = {0xF0, 0x9F, 0xA6, 0x8A};
-    RaffTag expectedName = {"RAFF"};
+    RaffTag expectedIcon = { 0xF0, 0x9F, 0xA6, 0x8A };
+    RaffTag expectedName = { "RAFF" };
     int headerCount = writeHeader(data, maxCount, expectedIcon, expectedName);
 
     data += headerCount;

@@ -33,6 +33,6 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: Raff MacOS Library
+          name: raff MacOS Library
           path: |
             src/libraff.a

@@ -88,13 +88,13 @@ int raffReadAndVerifyHeader(const uint8_t* data, size_t count)
         return -1;
     }
 
-    RaffTag expectedIcon = {0xF0, 0x9F, 0xA6, 0x8A};
+    RaffTag expectedIcon = { 0xF0, 0x9F, 0xA6, 0x8A };
     int iconEqual = raffTagEqual(icon, expectedIcon);
     if (!iconEqual) {
         return -2;
     }
 
-    RaffTag expectedName = {"RAFF"};
+    RaffTag expectedName = { "RAFF" };
     int nameEqual = raffTagEqual(name, expectedName);
     if (!nameEqual) {
         return -3;
@@ -106,7 +106,7 @@ int raffReadAndVerifyHeader(const uint8_t* data, size_t count)
 static const char* raffTagToString(char* target, size_t count, RaffTag self)
 {
     snprintf(target, count, "'%c%c%c%c' (0x%02X,0x%02X,0x%02X,0x%02X)", self[0], self[1], self[2], self[3], self[0],
-             self[1], self[2], self[3]);
+        self[1], self[2], self[3]);
     return target;
 }
 
