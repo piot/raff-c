@@ -11,5 +11,6 @@
 typedef uint8_t RaffTag[4];
 
 int raffTagEqual(RaffTag icon, RaffTag expectedIcon);
+const char* raffTagToString(char* target, size_t count, RaffTag self);
 
 #endif
